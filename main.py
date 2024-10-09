@@ -1,11 +1,8 @@
-#Applying gaussian blurring tequnique to an image 
-import cv2 
-import numpy as np 
-image=cv2.imread("cat.jpg",1)
-#gaussian blur used in machine learning proccesses
-gaussian=cv2.GaussianBlur(image,(5,5),0) #used to reduce image noise - reduces background blur by averaging pixel values
-cv2.imshow("Gauss",gaussian) #'gauss is the title for the window'
-
-
-cv2.waitKey(0)
+# Converting the original image to grey scale image 
+import os 
+import cv2
+img=cv2.imread('Lesson1IntroToOpenCV/images/cat.jpg',cv2.IMREAD_GRAYSCALE) #image read
+cv2.imshow('cat image display',img) #image show
+cv2.waitKey(0) #infinite time
 cv2.destroyAllWindows()
+#cv2.IMREAD_COLOR --> load the picture in color 

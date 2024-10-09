@@ -1,8 +1,10 @@
-# Converting the original image to grey scale image 
-import os 
+#Making a solid border of 1 by 1 pixel on an image 
+import os #operating system 
 import cv2
-img=cv2.imread('Lesson1IntroToOpenCV/images/cat.jpg',cv2.IMREAD_GRAYSCALE) #image read
-cv2.imshow('cat image display',img) #image show
-cv2.waitKey(0) #infinite time
+image=cv2.imread('/Users/yanigrazhdani/Desktop/OpenCVProjects/Lesson2/images/random_image.jpeg',1)
+border=cv2.copyMakeBorder(image,20,20,20,20,cv2.BORDER_REFLECT,1,1) #solid line BORDER_REFLECT
+cv2.imshow('border image',border)
+cv2.waitKey(0)
 cv2.destroyAllWindows()
-#cv2.IMREAD_COLOR --> load the picture in color 
+
+ 

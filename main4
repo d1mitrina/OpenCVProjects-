@@ -1,0 +1,15 @@
+#Increase, and deacreasing size of image using same ratio for each 
+import cv2 
+image =cv2.imread("Lesson3.blur/cat.jpg",1) # the 1-> index number 
+cv2.imshow("Original",image)
+resized=cv2.resize(image,(15,15))
+scaled=cv2.resize(image,(0,0),fx=1.5,fy=1.5)
+#fx and fy is the horiztonal ratio and vertical ratio respectively - ratio to maintain clarity 
+cv2.imshow("Decreased",resized)
+cv2.imshow("increased",scaled)
+
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+
